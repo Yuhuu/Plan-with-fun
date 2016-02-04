@@ -1,13 +1,14 @@
 
 <!DOCTYPE HTML>
 <html lang="no" ng-app="myApp" ng-controller="myCtrl">
-
+<!--do not use old directive ng:, becasue of IE compatibilit use ng-app instead-->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>AngularJS friendsPlan App</title>
         <!-- Bootstrap css-->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <!-- Angular js -->
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <!-- Bootstrap Js -->
@@ -17,11 +18,18 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         
     </head>
-
     <body>
         <?php
         require_once 'navigation.php';
         ?>
-
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view>
+        <?php
+        include "login.php";
+        ?>
+        </div>
+        <!--    put angualr scrip at the end , to avail long loading time   -->
+       
     </body>
 </html>

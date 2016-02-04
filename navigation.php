@@ -31,9 +31,6 @@
   </div>
 </nav>
 
-<?php
-include "login.php";
-?>
 <!--      <div id="main-content" ng-controller="PostCtrl" ng-init="getPosts()">
       <input class="hidden" type="checkbox" ng-model="viewEditPost" />
       <a href="#" class="submitButton" ng-click="viewEditPost=!viewEditPost"></a>

@@ -81,6 +81,35 @@
   margin: 0px;
   padding: 0px;
 }
+.sharp {
+  border-radius:0;
+}
+
+/*this is override from bootstrap*/
+
+.btn.outline {
+    background: none;
+}
+.btn-default.outline {
+    border: 2px solid #120402;
+}
+.btn-default.outline:hover, 
+.btn-default.outline:focus, 
+.btn-default.outline:active, 
+.btn-default.outline.active, 
+.open > .dropdown-toggle.btn-default {
+    color: #33a6cc;
+    border-color: #33a6cc;
+}
+
+.btn-default.outline:active, 
+.btn-default.outline.active {
+    border-color: #007299;
+    color: #007299;
+    box-shadow: none;
+}
+
+
 
 @media (max-width: 767) {
   .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
