@@ -61,8 +61,6 @@
             </select>
         </div>
 
-
-
         <div class="clearfix"></div>
         <div class="input-group col-xs-6 col-xs-3 ">
     <!--    <input type="button" value="Cancel changes" />-->

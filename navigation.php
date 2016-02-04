@@ -12,8 +12,8 @@
     <div class="collapse navbar-collapse nopadding" id="myNavbar" style="background-color:lightgray;">
    
         <ul class="col-xs-12 col-md-5 nav navbar-nav navbar-left nopadding">
-          <li class="col-xs-6 col-md-3" style="background-color:lavender;"><a href="#section1">
-                  <i class="fa fa-heartbeat"></i>section1</a></li>
+          <li class="col-xs-6 col-md-3" style="background-color:lavender;"><a href="#">
+                  <i class="fa fa-heartbeat"></i>Oh myhome</a></li>
           <li class="col-xs-6 col-md-3" style="background-color:lavenderblush;">
               <a href="#section2"><i class="fa fa-language"></i>section2</a></li>
           <li class="col-xs-6 col-md-3" style="background-color:HoneyDew ;">
