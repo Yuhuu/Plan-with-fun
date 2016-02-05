@@ -11,5 +11,4 @@
  */
  if(session_id() != "" || isset($_COOKIE[session_name()]))
             setcookie(session_name(),'',time()-259200, '/');
- header('Location: http://localhost/WEBprosjekt-2015/');
  ?>

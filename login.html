@@ -42,9 +42,7 @@
                    class="form-control sharp" 
                    placeholder="Please enter your password."
                    />
-<!--            <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">X</button>
-            </span>-->
+
         </div>
 
         <div class="input-group col-xs-12 col-md-6" >
@@ -74,7 +72,7 @@
 <script>
     // Defining angularjs application.
     var postApp = angular.module('myApp', []);
-    postApp.controller('myCtrl', function ($scope, $http) {
+    postApp.controller('main_ctrl', function ($scope, $http) {
         // create a blank object to handle form data.
         $scope.user = {};
         // calling our submit function.

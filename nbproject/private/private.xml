@@ -5,15 +5,19 @@
         <group>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/userProfile.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/navigation.php</file>
-            <file>file:/Applications/XAMPP/htdocs/friends_plan/login.php</file>
-            <file>file:/Applications/XAMPP/htdocs/friends_plan/images/logo.png</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/login.html</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/login.html.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/dbConnect.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/DbHandler.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/hashPassword.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/insert.php</file>
-            <file>file:/Applications/XAMPP/htdocs/friends_plan/index.php</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/user_auth.php</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/views/logout.php</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/views/sign-up.html</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/setup.php</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/views/about_me.html</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/script.js</file>
+            <file>file:/Applications/XAMPP/htdocs/friends_plan/index.html</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/README.md</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/sign_up.php</file>
             <file>file:/Applications/XAMPP/htdocs/friends_plan/style.css</file>

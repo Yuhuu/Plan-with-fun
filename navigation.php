@@ -31,32 +31,3 @@
   </div>
 </nav>
 
-<!--      <div id="main-content" ng-controller="PostCtrl" ng-init="getPosts()">
-      <input class="hidden" type="checkbox" ng-model="viewEditPost" />
-      <a href="#" class="submitButton" ng-click="viewEditPost=!viewEditPost"></a>
-	<form class="postForm" ng-submit="newPost(this);viewEditPost=!viewEditPost">
-	  <input class="inputTitle" type="text" name="title" ng-model="title" placeholder="tittel" /><br />
-	  <textarea class="inputContent" name="content" ng-model="content" placeholder="innhold"></textarea><br />
-	  <input class="inputPsw" type="password" name="psw" ng-model="psw" placeholder="passord" />
-	  <button class="submitButton" type="submit">Legg til post</button> 
-	  <button class="submitButton" ng-click="$scope.viewEditPost=false">angre</button>  
-	</form>
-	</div>
-    
-    <div ng-repeat="post in plans">
-	  <input class="hidden" type="checkbox" ng-model="post.recip" />
-	  <h2 ng-click="post.recip=!post.recip" ng-show="!post.recip">{{post.auth}}</h2>
-	  <p ng-show="!post.recip">{{post.message}}</p>
-	  <form class="postForm" ng-show="post.recip" ng-submit="updatePost(post,this);post.recip=!post.recip">
-	    <input class="inputTitle" type="text" name="newPostTitle" ng-model="post.title" placeholder="tittel" /><br />
-	    <textarea class="inputContent" name="newPostContent" ng-model="post.content" placeholder="innhold"></textarea><br />
-	    <button class="submitButton" type="submit">Endre post</button> 
-	    <button class="submitButton" ng-click="post.recip=!post.recip">Angre</button> 
-	    <input class="inputPsw" placeholder="passord" type="password" name="something" ng-model="psw" />
-	  </form>
-    </div>-->
-
-
-
-
-
