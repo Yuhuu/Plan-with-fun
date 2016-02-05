@@ -3,10 +3,10 @@
 
 <h3>============ Introduction ============</h3>
 
-<b>This is a website created by me and my friends. The name of it is "To Plan with gf/bf and "</b>
-<b>1. Simplifying registration process, after registration will redirect to the login page</b>
+<b>This is a website created by me and my friends. The name of it is "To Plan with gf/bf and "</b><br>
+<b>1. Simplifying registration process, after registration will redirect to the login page. Users can find their password</b>
 
-<b>2. All can be members(of course need to register and login). All member can add profile image and write an "about me" introduction</b>
+<b>2. All can be members(of course need to register and login). All member can add profile image and write an "about me" introduction</b> All members can see their friends list and events list.
 
 <b>3. Admin of website can see all the users profiles/image.</b>
 
