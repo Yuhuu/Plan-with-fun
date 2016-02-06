@@ -5,12 +5,13 @@
  * 2016
  * Created by yuanxinhuang
  */
-class DbHandler {
+
+class db_handler {
     
     private $conn;
 
     function __construct() {
-        require_once 'dbConnect.php';
+        require_once 'db_connect.php';
         // opening db connection
         $db = new dbConnect();
         $this->conn = $db->connect();
@@ -33,10 +34,11 @@ class DbHandler {
    
     function destroySession() {
         $_SESSION=array();
-        
-        // -259200 or not
-        if(session_id() != "" || isset($_COOKIE[session_name()]))
-            setcookie(session_name(),'',time()-259200, '/'); // 86400 is one day
+
+    if (session_id() != "" || isset($_COOKIE[session_name()]))
+      setcookie(session_name(), '', time()-2592000, '/');
+
+    session_destroy();
 }
     
     // avoid SQL injection

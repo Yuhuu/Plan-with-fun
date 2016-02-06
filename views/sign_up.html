@@ -9,6 +9,94 @@ Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
 @version 1.01.01
 -->
 
-        <div class="jumbotron text-center">
-            <h1>sign up me</h1>  {{ messge }}
+
+          <!--http://tutsnare.com/post-form-data-using-angularjs/-->
+<div class="breadcrumbs" id="breadcrumbs" style="margin-top:10px;">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li>
+        <li class="active"><a href="#">Sign up</a></li>
+    </ul>
+</div>
+
+<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="signup_controller" style="margin-top:10px;">
+    <h1>Sign up</h1>
+    <form class="form-inline" action="" name="registerForm" ng-submit="doSubmit()" 
+          ng-init="user.myEmail = '';
+                  user.myPassword = ''"
+          vmsgs-form>
+
+        <div class="input-group col-xs-12 col-md-5" >
+            <span class="input-group-addon sharp"><i class="fa fa-envelope-o fa-fw"></i></span>
+            <input type="email"
+                   name = "myEmail"
+                   vmsg
+                   ng-model="user.myEmail"
+                   ng-minlength ="10"
+                   class="form-control sharp" 
+                   placeholder="Please enter your email."
+                   />
         </div>
+        <div class="input-group col-xs-12 col-md-6" >
+            <span ng-show="registerForm.myEmail.$touched && registerForm.myEmail.$invalid">
+                Email address with "@" is required, it should contain minimun 10 character
+            </span>
+        </div>
+        <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
+            <span class="input-group-addon sharp"><i class="fa fa-key fa-fw"></i></span>
+            <input type="password" 
+                   name = "myPassword"
+                   vmsg
+                   ng-model="user.myPassword"
+                   ng-minlength="4"
+                   class="form-control sharp" 
+                   placeholder="Please enter your password."
+                   />
+
+        </div>
+
+        <div class="input-group col-xs-12 col-md-6" >
+            <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
+                Password is required, it should contain minimun 4 character.</span><br>
+            <span>{{ messge }}<br></span>
+        </div>
+
+        <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
+            <span class="input-group-addon sharp"><i class="fa fa-key fa-fw"></i></span>
+            <input type="password" 
+                   name = "myPassword"
+                   vmsg
+                   ng-model="user.myPassword"
+                   ng-minlength="4"
+                   class="form-control sharp" 
+                   placeholder="Please enter your password again."
+                   />
+
+        </div>
+
+        <div class="input-group col-xs-12 col-md-6" >
+            <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
+                Password is required, it should contain minimun 4 character.</span><br>
+            <span>{{ messge }}<br></span>
+        </div>
+        
+        <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
+            <span class="input-group-addon sharp">Choose your login role:</span>
+            <select class="selectpicker form-control sharp" data-live-search="true"  title="Please select a User type...">
+                <option value="User selected">User</option>
+                <option value="Admin">Admin</option>
+            </select>
+        </div>
+
+        <div class="clearfix"></div>
+        <div class="input-group col-xs-6 col-xs-3 ">
+    <!--    <input type="button" value="Cancel changes" />-->
+            <button type="button" data-ng-click="doCancel()" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Clear fields</button>
+
+            <button type="submit" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Login</button>
+           
+        </div>
+    </form>
+</div>

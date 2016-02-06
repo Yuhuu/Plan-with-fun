@@ -1,6 +1,6 @@
 
 <!DOCTYPE HTML>
-<html lang="no" ng-app="myApp" ng-controller="main_ctrl">
+<html lang="no" ng-app="myApp">
 <!--do not use old directive ng:, becasue of IE compatibilit use ng-app instead-->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -25,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="pull-left col-sm-3" href="#"><img src="images/logo.png" alt="logo View">
+        <a class="pull-left col-sm-3" href="#/"><img src="images/logo.png" alt="logo View">
         </a>
     </div>
     <div class="collapse navbar-collapse nopadding" id="myNavbar" style="background-color:lightgray;">
@@ -41,20 +41,13 @@
               <a href="#section3"><i class="fa fa-location-arrow"></i>section4</a></li>
         </ul>
 
-        <ul class="col-sm-12 col-md-5 nav navbar-nav  navbar-right nopadding">
-        <li class='col-xs-12 col-md-6' style='background-color:lightgoldenrodyellow;'>
-         <a href='#/sign_up' ><i class='fa fa-list'></i>Sign up</a></li>
-          <li class='col-xs-12 col-md-6' style='background-color:Khaki;'>
-          <a href='#/about_me'>Log in</a></li>
-      	</ul>
+        <?php
+        require_once 'user_profile.php';
+        ?>
         
     </div>
   </div>
 </nav>
-
-        
-
-        
     <!--  this is main content where different views will be injected -->
         <div id="main">
             <div ng-view></div>
@@ -67,12 +60,12 @@
             </div>
     </footer>
        <script src="js/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script type='text/javascript' src='script.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <!-- Bootstrap Js -->
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
-        
+       
     </body>
 </html>

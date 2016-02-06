@@ -9,7 +9,7 @@
     </ul>
 </div>
 
-<div class="container col-xs-12 col-md-10 col-md-offset-1" style="margin-top:10px;">
+<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="login_controller" style="margin-top:10px;">
     <h1> Login</h1>
     <form class="form-inline" action="" name="registerForm" ng-submit="doSubmit()" 
           ng-init="user.myEmail = '';
@@ -65,39 +65,7 @@
             <button type="button" data-ng-click="doCancel()" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Clear fields</button>
 
             <button type="submit" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Login</button>
-            <a href="resent_password.php">forget password? </a>
+            <a href="#/resent_password">forget password? </a>
         </div>
     </form>
 </div>
-<!--<script>
-    // Defining angularjs application.
-    var postApp = angular.module('myApp', []);
-    postApp.controller('main_ctrl', function ($scope, $http) {
-        // create a blank object to handle form data.
-        $scope.user = {};
-        // calling our submit function.
-        $scope.doSubmit = function () {
-            $http({
-                method: 'POST',
-                url: 'insert.php',
-                data: $scope.user,
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            })
-                    .success(function (data) {
-                        if (data.errors) {
-                            // Showing errors in data array
-                            $scope.errorUserName = data.errors.myEmail;
-                            $scope.errorPassword = data.errors.myPassword;
-                        } else {
-                            $scope.message = data.message;
-                            console.log("inserted Successfully");
-                        }
-                    });
-        };
-        $scope.doCancel = function () {
-            $scope.user.myEmail = '';
-            $scope.user.myPassword = '';
-            $scope.cancelsucceed = 'All input fields are cleared now.';
-        }
-    });
-</script>-->

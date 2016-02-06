@@ -1,5 +1,4 @@
 <?php
-
 /* 
  * Copyright(C) 2016.  All rights reserved to Bjørnholt school. 
  * https://bjornholt.osloskolen.no/
@@ -9,6 +8,15 @@
  * Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
  * @version 1.01.01
  */
- if(session_id() != "" || isset($_COOKIE[session_name()]))
-            setcookie(session_name(),'',time()-259200, '/');
+//
+// require_once 'db_handler.php';
+
+// $db_handle = new db_handler();
+// $db_handle->destroySession();
+  $_SESSION=array();
+
+    if (session_id() != "" || isset($_COOKIE[session_name()]))
+    setcookie(session_name(), '', time()-2592000, '/');
+    session_destroy();
+ echo "<h1>this is logout page</h1><p>this is logout page</p>";
  ?>
