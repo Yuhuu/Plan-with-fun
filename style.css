@@ -109,6 +109,34 @@
     box-shadow: none;
 }
 
+#picture1 {
+   
+    height:400px;
+    background: lightgoldenrodyellow url(images/nornal_user.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+#picture1:hover,
+#picture2:hover,
+#picture3:hover
+{ 
+    background-color: Khaki;
+}
+#picture2 {
+ 
+    height: 400px;
+    background: lightgoldenrodyellow url(images/randon_user.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;}
+#picture3 {
+
+    height: 400px;
+    background: lightgoldenrodyellow url(images/admin_user.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;}
+
+
 
 
 @media (max-width: 767) {

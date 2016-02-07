@@ -1,3 +1,4 @@
+<?php
 class db_connect {
                 
                 private $conn;
@@ -8,7 +9,7 @@ class db_connect {
              
                 function connect() {
                     define('DB_USERNAME', 'root');
-                    define('DB_PASSWORD', '');
+                    define('DB_PASSWORD', null);
                     define('DB_HOST', 'localhost');
                     define('DB_NAME', 'friends_plan_demo');
                     // Connecting to mysql database
@@ -20,3 +21,4 @@ class db_connect {
                 return $this->conn;
                 }
             }
+?>

@@ -11,7 +11,7 @@
 
 <div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="login_controller" style="margin-top:10px;">
     <h1> Login</h1>
-    <form class="form-inline" action="" name="registerForm" ng-submit="doSubmit()" 
+    <form class="form-inline" action="#" name="registerForm" ng-submit="doSubmit()" 
           ng-init="user.myEmail = '';
                   user.myPassword = ''"
           vmsgs-form>
@@ -48,7 +48,7 @@
         <div class="input-group col-xs-12 col-md-6" >
             <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
                 Password is required, it should contain minimun 4 character.</span><br>
-            <span>{{cancelsucceed}}<br></span>
+            <span>{{cancelsucceed}}{{message}}<br></span>
         </div>
 
         <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">

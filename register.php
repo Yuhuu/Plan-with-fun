@@ -4,7 +4,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.echo
  */
-
+include_once 'db_connect.php';
+// opening db connection
+$db = new db_connect();
+$connetion = $db->connect();
 session_start();
 $errors = array();
 $data = array();
@@ -20,29 +23,25 @@ if (empty($_POST['myEmail'])) {
 }
 if (!empty($errors)) {
     // put the errors array in data array
-  $data['errors']  = $errors;
+    $data['errors']  = $errors;
     } else {
-  $data['message'] = 'Form data is going well';
+    $data['message'] = 'Form data is going well';
 // response back. and put the value out of json_decoded array
     $userEmail = $_POST['myEmail'];
-        $pass = $_POST['myPassword'];
-        include_once 'db_connect.php';
-        // opening db connection
-        $db = new db_connect();
-        $conn = $db->connect();
-        $result = mysqli_query($conn, "INSERT INTO `members` ( `name`, `email`, `phone`, `aboutme`, `password`) VALUES
-( 'yuhu', '$userEmail', '1234567890','aboutme: I am yuhu, from PCA , Oslo', '$pass');");
+    $pass = $_POST['myPassword'];
+    global $connetion;
+    $result = mysqli_query($connetion, "INSERT INTO `members` ( `name`, `email`,
+        `phone`, `aboutme`, `password`) VALUES
+    ( 'yuhuang', '$userEmail', '12345678','aboutme: I am yuhu, from PCA , Oslo','$pass');");
         if (!$result) {
-        console . log("<p>Your information has not been successfu</p>");
-        console . log('failed to connect [' . $conn->connect_error . ']');
-        die('failed to connect [' . $conn->connect_error . ']');
+        die('failed to connect [' . $connetion->connect_error . ']');
     } else {
-        console . log("<p>Your information has been successfully added to the database.<p>");
+        echo "<p>Your information has been successfully added to the database.<p>";
         $_SESSION['user'] = $userEmail;
-    }
+        }
     }
     // put this in json fomat again
-    echo json_encode($data);
+      echo json_encode($data);
 ?> 
 
 

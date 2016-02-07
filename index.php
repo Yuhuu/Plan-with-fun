@@ -25,13 +25,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="pull-left col-sm-3" href="#/"><img src="images/logo.png" alt="logo View">
+        <a class="pull-left col-sm-3" href="#/"><img src="images/logo.svg" alt="logo View">
         </a>
     </div>
     <div class="collapse navbar-collapse nopadding" id="myNavbar" style="background-color:lightgray;">
    
         <ul class="col-xs-12 col-md-5 nav navbar-nav navbar-left nopadding">
-          <li class="col-xs-6 col-md-3" style="background-color:lavender;"><a href="#/">
+          <li class="col-xs-6 col-md-3" style="background-color:lavender;"><a href="#/home">
                   <i class="fa fa-heartbeat"></i>Oh myhome</a></li>
           <li class="col-xs-6 col-md-3" style="background-color:lavenderblush;">
               <a href="#section2"><i class="fa fa-language"></i>section2</a></li>
@@ -53,11 +53,12 @@
             <div ng-view></div>
         </div>
     <!--footer navbar--> 
-    <footer class="text-center">
-            <div class = "footer navbar-fixed-bottom">
+    <footer class="text-center container">
+            <div>
                 <p>Friends plan</p>
                 <p>Copy right of<a href="http://gruppe18.no">Oss</a></p>
-            </div>
+          
+            </div> 
     </footer>
        <script src="js/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>

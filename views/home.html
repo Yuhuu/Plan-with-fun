@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Copyright(C) 2016.  All rights reserved to Bjørnholt school. 
+https://bjornholt.osloskolen.no/
+@author Created by Bachelor Final Project group 18 at Oslo and Akershus University College 
+Creating interactive web pages using the Angualr framework carried out by:
+Martin Hansen Muren Mathisen (s189116), Waqas Liaqat (s180364), 
+Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
+@version 1.01.01
+-->
+
+<div class="breadcrumbs" id="breadcrumbs" style="margin-top:10px;">
+    <ul class="breadcrumb">
+        <li>
+            <i class="ace-icon fa fa-home home-icon"></i>
+            <a href="#">Home</a>
+        </li>
+       
+    </ul>
+</div>
+<div class="row col-md-10 col-md-offset-1" ng-controller="role_control">
+                <h1> Choose your role:</h1>
+		<div id="picture1" class="col-md-4 col-xs-12 img-thumbnail">
+                  <div style=" float:left"> 
+                        <h2>For registered user</h2>
+                  </div>
+		</div>
+                
+		<div id="picture2" class="col-md-4 col-xs-12 img-thumbnail">
+			<div style=" float:left">  
+                        <h2>Unregistered guests</h2>
+                  </div>
+		</div>
+		<div id="picture3" class="col-md-4 col-xs-12 img-thumbnail" onclick="location.href='#/admin';">
+<!--                     ng-click="open_admin()" -->
+                     
+                  <div style=" float:left"> 
+                        <h2>For admin user</h2>
+                  </div>
+		</div>
+</div>

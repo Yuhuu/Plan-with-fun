@@ -2,7 +2,10 @@
     - script.js             <!-- stores all our angular code -->
     - index.html            <!-- main layout -->
     - views                 <!-- the pages that will be injected into the main layout -->
+    ----- home.html
+    ----- admin.html Admin personal can sort the user by many ways
     ----- login.html
-    ----- logout.html
     ----- about_me.html
     ----- sign_up.html
+    ----- logout.html
+    ----resent_password.html

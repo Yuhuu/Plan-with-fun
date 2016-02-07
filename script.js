@@ -10,6 +10,16 @@
         $routeProvider
         
             // route for the login page
+             .when('/home', {
+                templateUrl : 'views/home.html',
+                controller  : 'home_controller'
+            })
+            
+            .when('/admin', {
+                templateUrl : 'views/admin.html'
+               
+            })
+            
             .when('/login', {
                 title: 'login',
                 templateUrl : 'views/login.html',
@@ -41,13 +51,16 @@
             })
             
             .otherwise({
-                redirectTo: '/login'
+                redirectTo: '/home'
             });
     }]);
 
     // create the controller and inject Angular's $scope
    
-
+    app.controller('home_controller', function($scope) {
+        $scope.message = 'home now. This is just a demo.';
+    });
+    
     app.controller('aboutme_controller', function($scope) {
         $scope.message = 'Look! I am an about me page.';
     });
@@ -71,7 +84,7 @@
         $scope.doSubmit = function () {
             $http({
                 method: 'POST',
-                url: 'insert.php',
+                url: 'register.php',
                 data: $scope.user,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             })
@@ -80,9 +93,15 @@
                             // Showing errors in data array
                             $scope.errorUserName = data.errors.myEmail;
                             $scope.errorPassword = data.errors.myPassword;
+                            console.log("There is inserted errors");
                         } else {
+                            if (!data.message) {
                             $scope.message = data.message;
-                            console.log("inserted Successfully");
+                            console.log("inserted without message Successfully");
+                            }
+                            else {
+                            console.log("inserted with message Successfully");
+                            }
                         }
                     });
         };
@@ -93,3 +112,20 @@
         }
     });
     
+    app.controller('role_control', function($scope) {
+        $scope.message = 'home now. This is just a demo.';
+    });
+    
+    app.controller('show_user_controller', function($scope) {
+  $scope.sortType     = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+  $scope.search_user   = '';     // set the default search/filter term
+  
+  // create the list of users 
+  $scope.sushi = [
+    { name: 'Cali Roll', email: 'Crab', phone: '212341',aboutme: 'Hello,I am not a ladyboy',created: '2016-02-04 11:37:56' },
+    { name: 'Philly', email: 'Tuna', phone: '412341234',aboutme: 'Hello,I am shabby a ladyboy',created: '2015-02-04 11:37:56' },
+    { name: 'TigerLiu', email: 'Eel', phone: '712341',aboutme: 'Hello,I am big a ladyboy',created: '2016-02-04 11:07:56' },
+    { name: 'Rainbow', email: 'Variety', phone: '6123412',aboutme: 'Hello,I am not a ladyboy',created: '2016-01-04 10:37:56'}
+  ];
+});
