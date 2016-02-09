@@ -13,10 +13,15 @@
 
 // $db_handle = new db_handler();
 // $db_handle->destroySession();
-  $_SESSION=array();
-
+    session_start();
+    error_reporting(E_ALL);
+    $_SESSION=array();
     if (session_id() != "" || isset($_COOKIE[session_name()]))
     setcookie(session_name(), '', time()-2592000, '/');
     session_destroy();
- echo "<h1>this is logout page</h1><p>this is logout page</p>";
- ?>
+    header("Location: ./home.html"); /* Redirect browser */
+    exit();
+
+?>
+
+

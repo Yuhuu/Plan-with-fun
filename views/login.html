@@ -9,12 +9,12 @@
     </ul>
 </div>
 
-<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="login_controller" style="margin-top:10px;">
-    <h1> Login</h1>
-    <form class="form-inline" action="#" name="registerForm" ng-submit="doSubmit()" 
+<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="register_controller" style="margin-top:10px;">
+    <h1>Registration</h1>
+    <form class="form-inline" action="#" name="registration" ng-submit="doSubmit()" 
           ng-init="user.myEmail = '';
                   user.myPassword = ''"
-          vmsgs-form>
+          vmsgs-form >
 
         <div class="input-group col-xs-12 col-md-5" >
             <span class="input-group-addon sharp"><i class="fa fa-envelope-o fa-fw"></i></span>
@@ -28,7 +28,7 @@
                    />
         </div>
         <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registerForm.myEmail.$touched && registerForm.myEmail.$invalid">
+            <span ng-show="registration.myEmail.$touched && registration.myEmail.$invalid">
                 Email address with "@" is required, it should contain minimun 10 character
             </span>
         </div>
@@ -42,11 +42,10 @@
                    class="form-control sharp" 
                    placeholder="Please enter your password."
                    />
-
         </div>
 
         <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
+            <span ng-show="registration.myPassword.$touched && registration.myPassword.$invalid">
                 Password is required, it should contain minimun 4 character.</span><br>
             <span>{{cancelsucceed}}{{message}}<br></span>
         </div>

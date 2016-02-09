@@ -8,7 +8,7 @@ include_once 'db_connect.php';
 // opening db connection
 $db = new db_connect();
 $connetion = $db->connect();
-session_start();
+
 $errors = array();
 $data = array();
 
@@ -37,6 +37,7 @@ if (!empty($errors)) {
         die('failed to connect [' . $connetion->connect_error . ']');
     } else {
         echo "<p>Your information has been successfully added to the database.<p>";
+        session_start();
         $_SESSION['user'] = $userEmail;
         }
     }

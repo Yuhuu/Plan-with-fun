@@ -54,13 +54,14 @@
         </div>
     <!--footer navbar--> 
     <footer class="text-left container">
+      
             <div class="text-left container col-xs-12">
                 <p>Friends plan Friends plan</p>
                 <p>Copy right of<a href="http://gruppe18.no">Oss</a></p>
           
             </div> 
     </footer>
-       <script src="js/angular.min.js"></script>
+        <script src="js/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script type='text/javascript' src='script.js'></script>

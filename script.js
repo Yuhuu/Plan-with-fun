@@ -16,8 +16,12 @@
             })
             
             .when('/admin', {
-                templateUrl : 'views/admin.html'
+                templateUrl : 'views/adminbord.php'
                
+            })
+            
+            .when('/userbord', {
+                templateUrl : 'views/userbord.php'
             })
             
             .when('/login', {
@@ -36,7 +40,7 @@
             .when('/sign_up', {
                 title: 'sign_up',
                 templateUrl : 'views/sign_up.html',
-                controller  : 'sign_up_controller'
+                controller  : 'login_controller'
             })
 
             // route for the logout page
@@ -58,7 +62,7 @@
     // create the controller and inject Angular's $scope
    
     app.controller('home_controller', function($scope) {
-        $scope.message = 'home now. This is just a demo.';
+        $scope.message = 'Welcome homepage...';
     });
     
     app.controller('aboutme_controller', function($scope) {
@@ -70,7 +74,7 @@
     });
     
     app.controller('logout_controller', function($scope) {
-        $scope.message = 'logout now. This is just a demo.';
+        $scope.message = 'You have logged out now....';
     });
     
     app.controller('resent_password_controller', function($scope) {
@@ -112,10 +116,7 @@
         }
     });
     
-    app.controller('role_control', function($scope) {
-        $scope.message = 'home now. This is just a demo.';
-    });
-    
+   
     app.controller('show_user_controller', function($scope) {
   $scope.sortType     = 'name'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
@@ -126,6 +127,12 @@
     { name: 'Cali Roll', email: 'Crab', phone: '212341',aboutme: 'Hello,I am not a ladyboy',created: '2016-02-04 11:37:56' },
     { name: 'Philly', email: 'Tuna', phone: '412341234',aboutme: 'Hello,I am shabby a ladyboy',created: '2015-02-04 11:37:56' },
     { name: 'TigerLiu', email: 'Eel', phone: '712341',aboutme: 'Hello,I am big a ladyboy',created: '2016-02-04 11:07:56' },
+    { name: 'Rainbow', email: 'Variety', phone: '6123412',aboutme: 'Hello,I am not a ladyboy',created: '2016-01-04 10:37:56'}
+  ];
+});
+
+app.controller('show_me_controller', function($scope) {
+$scope.myinfor = [
     { name: 'Rainbow', email: 'Variety', phone: '6123412',aboutme: 'Hello,I am not a ladyboy',created: '2016-01-04 10:37:56'}
   ];
 });
