@@ -24,6 +24,13 @@
                 templateUrl : 'views/userbord.php'
             })
             
+            
+             .when('/sign_up', {
+                title: 'sign_up',
+                templateUrl : 'views/sign_up.html',
+                controller  : 'sign_up_controller'
+            })
+            
             .when('/login', {
                 title: 'login',
                 templateUrl : 'views/login.html',
@@ -37,11 +44,7 @@
                 controller  : 'aboutme_controller'
             })
             
-            .when('/sign_up', {
-                title: 'sign_up',
-                templateUrl : 'views/sign_up.html',
-                controller  : 'login_controller'
-            })
+           
 
             // route for the logout page
             .when('/logout', {
@@ -59,7 +62,8 @@
             });
     }]);
 
-    // create the controller and inject Angular's $scope
+    // create the controller and inject the scope service into it
+    //There can be multiple controller on a single page
    
     app.controller('home_controller', function($scope) {
         $scope.message = 'Welcome homepage...';
@@ -68,10 +72,12 @@
     app.controller('aboutme_controller', function($scope) {
         $scope.message = 'Look! I am an about me page.';
     });
+//    app.controller('AppCtl', function($scope){
+//        $scope.clickHandler = function(){
+//    window.alert('Clicked!');
+//    };
+//    });
 
-    app.controller('sign_up_controller', function($scope) {
-        $scope.message = 'sign up now. This is just a demo.';
-    });
     
     app.controller('logout_controller', function($scope) {
         $scope.message = 'You have logged out now....';
@@ -80,6 +86,42 @@
     app.controller('resent_password_controller', function($scope) {
         $scope.message = 'resent_password. This is just a demo.';
     });
+      
+    app.controller('sign_up_controller', function($scope, $http) {
+        // create a blank object to handle form data.
+        $scope.user = {};
+        // calling our submit function.
+        $scope.doSubmit = function () {
+            $http({
+                method: 'POST',
+                url: 'register.php',
+                data: $scope.register_user,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+            })
+                    .success(function (data) {
+                        if (data.errors) {
+                            // Showing errors in data array
+                            $scope.errorUserName = data.errors.myEmail;
+                            $scope.errorPassword = data.errors.myPassword;
+                            console.log("There is inserted errors");
+                        } else {
+                            if (!data.message) {
+                            $scope.message = data.message;
+                            console.log("inserted without message Successfully");
+                            }
+                            else {
+                            console.log("inserted with message Successfully");
+                            }
+                        }
+                    });
+        };
+        $scope.doCancel = function () {
+            $scope.register_user.myEmail = '';
+            $scope.register_user.myPassword = '';
+            $scope.cancelsucceed = 'All input fields are cleared now.';
+        }
+    });
+    
       
     app.controller('login_controller', function($scope, $http) {
         // create a blank object to handle form data.
@@ -136,3 +178,5 @@ $scope.myinfor = [
     { name: 'Rainbow', email: 'Variety', phone: '6123412',aboutme: 'Hello,I am not a ladyboy',created: '2016-01-04 10:37:56'}
   ];
 });
+
+

@@ -37,6 +37,9 @@ if(checkUser())
          "<a href='#/sign_up' ><i class='fa fa-list'></i>Sign up</a></li>".
           "<li class='col-xs-12 col-md-6' style='background-color:Khaki;'>".
           "<a href='#/login'>Log in</a></li>
-      	</ul>";
+            </ul>";
+       
+//       data-ng-click="clickHandler()"
+      
     }
 ?>

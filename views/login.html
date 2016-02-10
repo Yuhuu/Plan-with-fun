@@ -9,8 +9,8 @@
     </ul>
 </div>
 
-<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="register_controller" style="margin-top:10px;">
-    <h1>Registration</h1>
+<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="login_controller" style="margin-top:10px;">
+    <h1>Log in</h1>
     <form class="form-inline" action="#" name="registration" ng-submit="doSubmit()" 
           ng-init="user.myEmail = '';
                   user.myPassword = ''"
@@ -23,7 +23,7 @@
                    vmsg
                    ng-model="user.myEmail"
                    ng-minlength ="10"
-                   class="form-control sharp" 
+                   class="form-control sharp input-lg" 
                    placeholder="Please enter your email."
                    />
         </div>
@@ -39,7 +39,7 @@
                    vmsg
                    ng-model="user.myPassword"
                    ng-minlength="4"
-                   class="form-control sharp" 
+                   class="form-control sharp input-lg" 
                    placeholder="Please enter your password."
                    />
         </div>
@@ -52,7 +52,7 @@
 
         <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
             <span class="input-group-addon sharp">Choose your login role:</span>
-            <select class="selectpicker form-control sharp" data-live-search="true"  title="Please select a User type...">
+            <select class="selectpicker form-control sharp input-lg" data-live-search="true"  title="Please select a User type...">
                 <option value="User selected">User</option>
                 <option value="Admin">Admin</option>
             </select>

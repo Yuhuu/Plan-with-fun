@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<!--
-Copyright(C) 2016.  All rights reserved to Bjørnholt school. 
-https://bjornholt.osloskolen.no/
-@author Created by Bachelor Final Project group 18 at Oslo and Akershus University College 
-Creating interactive web pages using the Angualr framework carried out by:
-Martin Hansen Muren Mathisen (s189116), Waqas Liaqat (s180364), 
-Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
-@version 1.01.01
--->
-
-
 <!--http://tutsnare.com/post-form-data-using-angularjs/-->
 <div class="breadcrumbs" id="breadcrumbs" style="margin-top:10px;">
     <ul class="breadcrumb">
@@ -21,26 +9,26 @@ Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
     </ul>
 </div>
 
-<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="login_controller" style="margin-top:10px;">
-    <h1>Sign up</h1>
-    <form class="form-inline" action="#" name="registerForm" ng-submit="doSubmit()" 
-          ng-init="user.myEmail = '';
-                  user.myPassword = ''"
-          vmsgs-form>
+<div class="container col-xs-12 col-md-10 col-md-offset-1" ng-controller="sign_up_controller" style="margin-top:10px;">
+    <h1>Sign Up</h1>
+    <form class="form-inline" action="#" name="registration" ng-submit="doSubmit()" 
+          ng-init="register_user.myEmail = '';
+                  register_user.myPassword = ''"
+          vmsgs-form >
 
         <div class="input-group col-xs-12 col-md-5" >
             <span class="input-group-addon sharp"><i class="fa fa-envelope-o fa-fw"></i></span>
             <input type="email"
                    name = "myEmail"
                    vmsg
-                   ng-model="user.myEmail"
+                   ng-model="register_user.myEmail"
                    ng-minlength ="10"
-                   class="form-control sharp" 
+                   class="form-control sharp input-lg" 
                    placeholder="Please enter your email."
                    />
         </div>
         <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registerForm.myEmail.$touched && registerForm.myEmail.$invalid">
+            <span ng-show="registration.myEmail.$touched && registration.myEmail.$invalid">
                 Email address with "@" is required, it should contain minimun 10 character
             </span>
         </div>
@@ -49,42 +37,22 @@ Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
             <input type="password" 
                    name = "myPassword"
                    vmsg
-                   ng-model="user.myPassword"
+                   ng-model="register_user.myPassword"
                    ng-minlength="4"
-                   class="form-control sharp" 
+                   class="form-control sharp input-lg" 
                    placeholder="Please enter your password."
                    />
-
         </div>
 
         <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
+            <span ng-show="registration.myPassword.$touched && registration.myPassword.$invalid">
                 Password is required, it should contain minimun 4 character.</span><br>
-            <span>{{ messge }}<br></span>
+            <span>{{cancelsucceed}}{{message}}<br></span>
         </div>
 
-        <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
-            <span class="input-group-addon sharp"><i class="fa fa-key fa-fw"></i></span>
-            <input type="password" 
-                   name = "myPassword"
-                   vmsg
-                   ng-model="user.myPassword"
-                   ng-minlength="4"
-                   class="form-control sharp" 
-                   placeholder="Please enter your password again."
-                   />
-
-        </div>
-
-        <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registerForm.myPassword.$touched && registerForm.myPassword.$invalid">
-                Password is required, it should contain minimun 4 character.</span><br>
-            <span>{{ messge }}<br></span>
-        </div>
-        
         <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
             <span class="input-group-addon sharp">Choose your login role:</span>
-            <select class="selectpicker form-control sharp" data-live-search="true"  title="Please select a User type...">
+            <select class="selectpicker form-control sharp input-lg" data-live-search="true"  title="Please select a User type...">
                 <option value="User selected">User</option>
                 <option value="Admin">Admin</option>
             </select>
@@ -95,8 +63,8 @@ Yuanxin Huang (s184519), Thanh Nguyen Chu (s169954)
     <!--    <input type="button" value="Cancel changes" />-->
             <button type="button" data-ng-click="doCancel()" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Clear fields</button>
 
-            <button type="submit" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Regist</button>
-           
+            <button type="submit" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Login</button>
+            <a href="#/resent_password">forget password? </a>
         </div>
     </form>
 </div>
