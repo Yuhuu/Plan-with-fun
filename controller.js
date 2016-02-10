@@ -107,6 +107,7 @@
                         } else {
                             if (!data.message) {
                             $scope.message = data.message;
+                            window.alert('inserted into database succeed!');
                             console.log("inserted without message Successfully");
                             }
                             else {
@@ -119,6 +120,7 @@
             $scope.register_user.myEmail = '';
             $scope.register_user.myPassword = '';
             $scope.cancelsucceed = 'All input fields are cleared now.';
+            window.alert('All input fields are cleared now.!');
         }
     });
     
@@ -130,7 +132,7 @@
         $scope.doSubmit = function () {
             $http({
                 method: 'POST',
-                url: 'register.php',
+                url: 'Api/register.php',
                 data: $scope.user,
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             })

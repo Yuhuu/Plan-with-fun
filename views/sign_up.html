@@ -13,7 +13,7 @@
     <h1>Sign Up</h1>
     <form class="form-inline" action="#" name="registration" ng-submit="doSubmit()" 
           ng-init="register_user.myEmail = '';
-                  register_user.myPassword = ''"
+                  register_user.myPassword = ''; register_user.rolecode = 'normaluser'"
           vmsgs-form >
 
         <div class="input-group col-xs-12 col-md-5" >
@@ -45,25 +45,33 @@
         </div>
 
         <div class="input-group col-xs-12 col-md-6" >
-            <span ng-show="registration.myPassword.$touched && registration.myPassword.$invalid">
-                Password is required, it should contain minimun 4 character.</span><br>
+            <span ng-show="registration.myPassword.$touched && 
+                        registration.myPassword.$invalid">
+                Password is required, it should contain minimun 4 character.
+            </span><br>
             <span>{{cancelsucceed}}{{message}}<br></span>
         </div>
 
         <div class="input-group col-xs-12 col-md-5" style="margin-top:10px;">
-            <span class="input-group-addon sharp">Choose your login role:</span>
-            <select class="selectpicker form-control sharp input-lg" data-live-search="true"  title="Please select a User type...">
-                <option value="User selected">User</option>
-                <option value="Admin">Admin</option>
+            <span class="input-group-addon sharp">Choose your role:</span>
+            <select class="selectpicker form-control sharp input-lg" 
+                    ng-model="register_user.rolecode" data-live-search="true" title="Select a User type...">
+                <option value="normaluser" >User</option>
+                <option value="admin">Admin</option>
             </select>
         </div>
+        
+
 
         <div class="clearfix"></div>
         <div class="input-group col-xs-6 col-xs-3 ">
     <!--    <input type="button" value="Cancel changes" />-->
-            <button type="button" data-ng-click="doCancel()" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Clear fields</button>
+            <button type="button" data-ng-click="doCancel()" 
+                    class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">
+                Clear fields</button>
 
-            <button type="submit" class="btn btn-default sharp outline col-xs-12" style="margin-top:10px;">Login</button>
+            <button type="submit" class="btn btn-default sharp outline col-xs-12" 
+                    style="margin-top:10px;">Become a new member</button>
             <a href="#/resent_password">forget password? </a>
         </div>
     </form>

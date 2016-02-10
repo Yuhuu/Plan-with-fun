@@ -21,6 +21,10 @@ if (empty($_POST['myPassword'])) {
 if (empty($_POST['myEmail'])) {
     $errors['myEmail'] = 'Email is required.';
 }
+
+if (empty($_POST['rolecode'])) {
+    $errors['rolecode'] = 'Role is required.';
+}
 if (!empty($errors)) {
     // put the errors array in data array
     $data['errors']  = $errors;
@@ -29,20 +33,22 @@ if (!empty($errors)) {
 // response back. and put the value out of json_decoded array
     $userEmail = $_POST['myEmail'];
     $pass = $_POST['myPassword'];
+    $rolecode = $_POST['rolecode'];
     global $connetion;
     $result = mysqli_query($connetion, "INSERT INTO `members` ( `name`, `email`,
-        `phone`, `aboutme`, `password`) VALUES
-    ( 'yuhuang', '$userEmail', '12345678','aboutme: I am yuhu, from PCA , Oslo','$pass');");
+        `phone`, `aboutme`, `password`,`rolecode`) VALUES
+    ( 'yuhuang', '$userEmail', '12345678','aboutme: I am yuhu, from PCA , Oslo','$pass','$rolecode');");
         if (!$result) {
         die('failed to connect [' . $connetion->connect_error . ']');
     } else {
-        echo "<p>Your information has been successfully added to the database.<p>";
         session_start();
         $_SESSION['user'] = $userEmail;
+        echoResponse(200, $session);
         }
     }
     // put this in json fomat again
       echo json_encode($data);
+    
 ?> 
 
 
