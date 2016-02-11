@@ -31,28 +31,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        
-        <a id="svg" class="pull-left col-sm-3" href="#/"><img src="images/logo.svg" alt="logo View">
+        <a id="logo_main" class="pull-left col-sm-3" href="#/"><img src="images/logo.svg" width="60px" height="70px" alt="logo View">
         </a>
     </div>
     <div class="collapse navbar-collapse nopadding" id="myNavbar" style="background-color:lightgray;">
    
         <ul class="col-xs-12 col-md-5 nav navbar-nav navbar-left nopadding">
-          <li class="col-xs-6 col-md-3" style="background-color:lavender;"><a href="#/home">
-                  <i class="fa fa-heartbeat"></i>home</a></li>
-          <li class="col-xs-6 col-md-3" style="background-color:lavenderblush;">
-              <a href="#section2"><i class="fa fa-language"></i>section2</a></li>
-          <li class="col-xs-12 col-md-6" style="background-color:HoneyDew ;">
-              <form class="navbar-form navbar-right" role="search">
-                    <input type="text" class="form-control"
-                    placeholder="Search">
-              </form>
-              </li>
+          <li class="col-xs-6 col-md-4" style="background-color:Khaki;height:70px;"><a href="#/home">
+                  <i class="fa fa-heartbeat"></i>HOME</a></li>
+          <li class="col-xs-6 col-md-4" style="background-color:lightgoldenrodyellow;">
+              <a href="#section2"><i class="fa fa-language"></i>LANGUAGE</a></li>
+          <li class="col-xs-12 col-md-4" style="background-color:HoneyDew;">
+                    <input type="text" class="form-control" 
+                    placeholder="Search...">
+<!--              <form class="navbar-form" role="search"> </form>-->
+          </li>
         </ul>
-
+        <div id = "myProfileNavbar">
         <?php
         require_once 'user_profile.php';
         ?>
+        </div>
         
     </div>
   </div>

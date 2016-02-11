@@ -122,7 +122,12 @@
             $scope.cancelsucceed = 'All input fields are cleared now.';
             window.alert('All input fields are cleared now.!');
         }
-    });
+
+        $scope.clickHandler = function(){
+        $scope.isHidden = !$scope.isHidden;
+        }
+
+      });
     
       
     app.controller('login_controller', function($scope, $http) {

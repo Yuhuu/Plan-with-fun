@@ -24,7 +24,7 @@ if (isset($_SESSION['user']))
 if(checkUser())
   {
     global $user;
-    echo "<ul class='col-sm-12 col-md-5 nav navbar-nav  navbar-right nopadding'>".
+    echo "<ul class='col-sm-12 col-md-6 nav navbar-nav navbar-right nopadding'>".
          "<li class='col-xs-12 col-md-5' style='background-color:lightgoldenrodyellow;'>".
          "<a href='#'><i class='fa fa-list'></i>Welcome, $user</a></li>".     
          "<li class='col-xs-12 col-md-2'><a href='#logout'><i class='fa fa-sign-out'></i>Logout</a></li>".
@@ -32,7 +32,7 @@ if(checkUser())
          "<li class='col-xs-12 col-md-2'><a href='#event'><i class='fa fa-comment'></i>Event</a></li></ul>";
   }
     else {        
-       echo "<ul class='col-sm-12 col-md-5 nav navbar-nav  navbar-right nopadding'>".
+       echo "<ul class='col-sm-12 col-md-6 nav navbar-nav navbar-right nopadding'>".
             "<li class='col-xs-12 col-md-6' style='background-color:lightgoldenrodyellow;'>".
          "<a href='#/sign_up' ><i class='fa fa-list'></i>Sign up</a></li>".
           "<li class='col-xs-12 col-md-6' style='background-color:Khaki;'>".
